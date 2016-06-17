@@ -47,9 +47,7 @@ public class LiteCollider : MonoBehaviour {
   }
 
   public LiteCastHit LineCast(Vector3 start, Vector3 end) {
-    return new LiteCastHit() {
-      isHit = false, go = null, normal = Vector3.right, point = Vector3.one
-    };
+    return LitePhysicsCalculator.LineCast(this, start, end);
   }
 
 }
